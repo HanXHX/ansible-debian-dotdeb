@@ -13,8 +13,8 @@ This role works only with Debian Wheezy / Jessie. It could run on Ubuntu, but no
 Role Variables
 --------------
 
-- dotdeb\_php\_version: specify PHP version
-- dotdeb\_apt\_host: FQDN of Dotdeb default repository
+- `dotdeb_php_version`: specify PHP version
+- `dotdeb_apt_host`: FQDN of Dotdeb default repository
 
 Notes
 -----
@@ -31,8 +31,6 @@ None.
 
 Example Playbook
 ----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
     - hosts: servers
       roles:
