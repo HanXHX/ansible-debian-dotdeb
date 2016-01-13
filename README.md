@@ -21,7 +21,8 @@ Notes
 
 - [Debian 8.0 Jessie has been released, and what it means for Dotdeb](https://www.dotdeb.org/2015/04/26/debian-8-0-jessie-has-been-released-and-what-it-means-for-dotdeb/)
 - Provide 3 versions of PHP (only for Debian Wheezy): 5.4, 5.5, 5.6
-- If dotdeb\_php\_version is undefined, PHP version is 5.6
+- If `dotdeb_php_version` is undefined, PHP version is 5.6 with php5 packages
+- On Debian Jessie, you can use [PHP7 packages](https://www.dotdeb.org/2015/12/04/php-7-0-0-is-available-for-jessie/)
 - Downgrade PHP version is not supported!
 
 Dependencies
@@ -44,5 +45,5 @@ GPLv2
 Author Information
 ------------------
 
-  - You can find many other roles in my GitHub "lab": https://github.com/HanXHX/my-ansible-playbooks 
-  - All issues, pull-request are welcome :)
+- Twitter: [@hanxhx_](https://twitter.com/hanxhx_)
+
