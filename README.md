@@ -1,7 +1,7 @@
 Dotdeb role for Ansible
 =======================
 
-[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-HanXHX.dotdeb-blue.svg)](https://galaxy.ansible.com/list#/roles/3970) [![Build Status](https://travis-ci.org/HanXHX/ansible-debian-dotdeb.svg)](https://travis-ci.org/HanXHX/ansible-debian-dotdeb)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-HanXHX.dotdeb-blue.svg)](https://galaxy.ansible.com/HanXHX/dotdeb) [![Build Status](https://travis-ci.org/HanXHX/ansible-debian-dotdeb.svg)](https://travis-ci.org/HanXHX/ansible-debian-dotdeb)
 
 This role provide Dotdeb repository for Debian. It contains many stable and up-to-date packages (MySQL, PHP, Nginx...).
 
