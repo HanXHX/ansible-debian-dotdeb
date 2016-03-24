@@ -1,8 +1,10 @@
 ---
 
 - hosts: all
+  vars:
+    dotdeb_wheezy_php_version: '5.5'
   roles:
-    - ../../ 
+    - ../../
   post_tasks:
     - name: SHELL | Check repository
       shell: apt-cache policy redis-server | grep Candidate

@@ -5,14 +5,18 @@ galaxy_info:
   description: Provide packages for Debian from Dotdeb repository
   company:
   license: GPLv2
-  min_ansible_version: 1.2
+  min_ansible_version: 2.0
   platforms:
     - name: Debian
       versions:
         - wheezy
         - jessie
-  categories:
+  galaxy_tags:
     - packaging
     - system
     - web
+    - debian
+    - dotdeb
+    - apt
+    - backports
 dependencies: []

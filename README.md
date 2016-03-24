@@ -13,7 +13,7 @@ This role works only with Debian Wheezy / Jessie. It could run on Ubuntu, but no
 Role Variables
 --------------
 
-- `dotdeb_php_version`: specify PHP version
+- `dotdeb_wheezy_php_version`: specify PHP version (Wheezy related)
 - `dotdeb_apt_host`: FQDN of Dotdeb default repository
 - `dotdeb_apt_src`: Boolean (default: false). Set true if you need src repository.
 
@@ -22,7 +22,6 @@ Notes
 
 - [Debian 8.0 Jessie has been released, and what it means for Dotdeb](https://www.dotdeb.org/2015/04/26/debian-8-0-jessie-has-been-released-and-what-it-means-for-dotdeb/)
 - Provide 3 versions of PHP (only for Debian Wheezy): 5.4, 5.5, 5.6
-- If `dotdeb_php_version` is undefined, PHP version is 5.6 with php5 packages
 - On Debian Jessie, you can use [PHP7 packages](https://www.dotdeb.org/2015/12/04/php-7-0-0-is-available-for-jessie/)
 - Downgrade PHP version is not supported!
 
@@ -36,7 +35,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: HanXHX.dotdeb, dotdeb_php_version: 5.5 }
+         - { role: HanXHX.dotdeb, dotdeb_wheezy_php_version: 5.5 }
 
 License
 -------
