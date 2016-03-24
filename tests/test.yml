@@ -3,3 +3,9 @@
 - hosts: all
   roles:
     - ../../ 
+  post_tasks:
+    - name: SHELL | Check repository
+      shell: apt-cache policy redis-server | grep Candidate
+      register: r
+      changed_when: false
+      failed_when: r.stdout.find('dotdeb') == -1
