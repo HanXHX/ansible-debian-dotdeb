@@ -15,6 +15,7 @@ Role Variables
 
 - `dotdeb_php_version`: specify PHP version
 - `dotdeb_apt_host`: FQDN of Dotdeb default repository
+- `dotdeb_apt_src`: Boolean (default: false). Set true if you need src repository.
 
 Notes
 -----
