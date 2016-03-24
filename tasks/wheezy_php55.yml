@@ -8,4 +8,4 @@
 - name: Add dotdeb php55 src (Wheezy)
   apt_repository: >
     repo='deb-src http://{{ dotdeb_apt_host }} wheezy-php55 all'
-    state=present
+    state="{{ 'present' if dotdeb_apt_src else 'absent' }}"
