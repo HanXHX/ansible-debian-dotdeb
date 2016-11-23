@@ -3,6 +3,11 @@
 - hosts: all
   vars:
     dotdeb_wheezy_php_version: '5.5'
+  pre_tasks:
+    - name: APT | Add backports respository
+      apt_repository: >
+        repo='deb http://ftp.debian.org/debian {{ ansible_distribution_release }}-backports main'
+        state='present'
   roles:
     - ../../
   post_tasks:
@@ -11,3 +16,12 @@
       register: r
       changed_when: false
       failed_when: r.stdout.find('dotdeb') == -1
+    - name: SHELL | Check Nginx HTTP2 repository
+      shell: LANG=C apt-cache policy nginx | awk '/Candidate:/ { print $NF }'
+      register: n
+      changed_when: false
+      failed_when: >
+        n.stdout.find('dotdeb') == -1 and
+        n.stdout.find('http2') != -1 and
+        n.stdout | version_compare('1.10.2', 'lt')
+      when : ansible_distribution_release == 'jessie'

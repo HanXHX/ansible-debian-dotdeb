@@ -14,6 +14,19 @@
     state="{{ 'present' if dotdeb_apt_src else 'absent' }}"
 
 - block:
+    - name: SHELL | Check if openssl 1.0.2+ is available (from backports)
+      shell: LANG=C apt-cache policy openssl | awk '/~bpo/ { print $1 }' | head -n 1
+      register: s
+      changed_when: false
+
+    - name: APT | Add Dotdeb repository (Nginx HTTP2)
+      apt_repository: >
+        repo='deb http://{{ dotdeb_apt_host }} jessie-nginx-http2 all'
+        state="{{ 'present' if s.stdout != '' and s.stdout | version_compare('1.0.2', 'ge') else 'absent' }}"
+
+  when: ansible_distribution_release == "jessie"
+
+- block:
   - name: Wheezy PHP 5.5
     include: wheezy_php55.yml
     when: dotdeb_wheezy_php_version == '5.5'
