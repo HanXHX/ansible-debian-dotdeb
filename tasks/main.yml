@@ -17,6 +17,7 @@
     - name: SHELL | Check if openssl 1.0.2+ is available (from backports)
       shell: LANG=C apt-cache policy openssl | awk '/~bpo/ { print $1 }' | head -n 1
       register: s
+      check_mode: no
       changed_when: false
 
     - name: APT | Add Dotdeb repository (Nginx HTTP2)
