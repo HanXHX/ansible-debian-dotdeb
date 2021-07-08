@@ -1,6 +1,12 @@
 Dotdeb role for Ansible
 =======================
 
+**WARNING**: This repository is abandoned in favor of [Sury](https://github.com/HanXHX/ansible-debian-sury).
+
+
+-------------------------
+
+
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-HanXHX.dotdeb-blue.svg)](https://galaxy.ansible.com/HanXHX/dotdeb) [![Build Status](https://travis-ci.org/HanXHX/ansible-debian-dotdeb.svg)](https://travis-ci.org/HanXHX/ansible-debian-dotdeb)
 
 This role provides Dotdeb repository for Debian. It contains many stable and up-to-date packages (MySQL, PHP, Nginx...).
